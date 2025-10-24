@@ -1,0 +1,293 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 120px;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+h2{
+    color: #2c3e50;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+#menu {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+#menu button {
+    padding: 10px 20px;
+    border: none;
+    background: #3498db;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#menu button:hover {
+    background: #2980b9;
+}
+
+#limpiarStorage {
+    background: #e74c3c;
+}
+
+#limpiarStorage:hover {
+    background: #c0392b;
+}
+
+.seccion {
+    display: none;
+    margin-top: 20px;
+}
+
+.contenedorTarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 8px rgba(0,0,0,0.2);
+    width: 200px; 
+    text-align: center; 
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+}
+
+.card h4 {
+    margin: 10px 0;
+    color: #2c3e50;
+}
+
+.card p {
+    margin: 5px 0;
+    color: #34495e;
+}
+
+.card-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.card-buttons button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+
+.card-buttons .editar {
+    background: #f39c12; 
+    color: white;
+    margin-right: 5px;
+}
+
+.card-buttons .editar:hover {
+    background: #e67e22;
+}
+
+.card-buttons .eliminar {
+    background: #e74c3c;
+    color: white;
+}
+
+.card-buttons .eliminar:hover {
+    background: #c0392b;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+form input, form button {
+    padding: 8px 10px;
+    font-size: 1em;
+    width: 180px;
+}
+
+form button[type="submit"] {
+    background: #27ae60;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form button[type="submit"]:hover {
+    background: #1e8449;
+}
+
+form button[type="button"] {
+    background: #95a5a6;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+form button[type="button"]:hover {
+    background: #7f8c8d;
+}
+
+#resumen p {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+#btnPagarResumen {
+    padding: 15px 30px; 
+    background-color: #2ecc71; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    margin-top: 20px; 
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#btnPagarResumen:hover {
+    background-color: #27ad60;
+}
+
+.swal-label-edit {
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    margin-top: 10px; 
+}
+
+footer {
+    position: fixed; 
+    bottom: 0;      
+    left: 0;         
+    
+    width: 100%;     
+    z-index: 1000;
+    box-sizing: border-box; 
+    
+    background-color: #222222;
+    color: #b0b0b0;          
+    padding: 20px 5%;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; 
+    min-height: 80px;
+    border-top: 1px solid #333; 
+}
+
+.footer-columna {
+    flex-grow: 1; 
+    padding: 5px 10px;
+    min-width: 220px;
+}
+
+.footer-columna.copyright {
+    text-align: left;
+}
+
+.footer-columna.info-central {
+    text-align: center;
+}
+
+.footer-columna.redes {
+    text-align: right;
+}
+
+.footer-columna p {
+    margin: 0; 
+    font-size: 0.9em; 
+}
+
+.redes-sociales-ctn a {
+    color: #007bff; 
+    font-size: 1.6em; 
+    margin-left: 18px; 
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.redes-sociales-ctn a:hover {
+    color: #e0e0e0; 
+}
+
+/* Adaptación para pantallas pequeñas*/
+
+@media (max-width: 768px) { 
+    footer {
+        flex-direction: column; 
+        align-items: center; 
+        padding: 20px 3%; 
+        text-align: center; 
+    }
+
+    .footer-columna {
+        width: 100%;
+        margin-bottom: 15px; 
+        text-align: center !important; 
+    }
+
+    .footer-columna:last-child {
+        margin-bottom: 0; 
+    }
+
+    .redes-sociales-ctn {
+        display: flex; 
+        justify-content: center; 
+        width: 100%;
+    }
+
+    .redes-sociales-ctn a {
+        margin: 0 10px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .redes-sociales-ctn a {
+        font-size: 1.4em;
+    }
+}

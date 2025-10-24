@@ -1,0 +1,14 @@
+{
+    "productos": [
+        { "id": 1, "nombre": "Tira de asado", "precio": 20000, "cantidad": 1 },
+        { "id": 2, "nombre": "Vacío", "precio": 13250, "cantidad": 1 },
+        { "id": 3, "nombre": "Chorizo", "precio": 2000, "cantidad": 4 },
+        { "id": 4, "nombre": "Pan", "precio": 2500, "cantidad": 4 }
+    ],
+    "aportes": [
+        { "id": 1, "nombre": "Ezequiel", "monto": 15000 },
+        { "id": 2, "nombre": "Mauro", "monto": 10000 },
+        { "id": 3, "nombre": "Tamara", "monto": 12812.50 },
+        { "id": 4, "nombre": "Hernan", "monto": 7000 }
+    ]
+}

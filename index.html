@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compartir Gastos</title>
+    
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Compartir Gastos</h1>
+    <p>Agrega productos y participantes para calcular la cuota por persona.</p>
+
+    <nav id="menu">
+        <button data-seccion="productos">Productos</button>
+        <button data-seccion="aportes">Aportes</button>
+        <button data-seccion="resumen">Resumen</button>
+        <button data-seccion="historial">Historial</button>
+        <button id="limpiarStorage">Borrar Datos</button>
+    </nav>
+    
+    <div id="mensajeError" class="mensaje-error"></div>
+
+    <section id="productos" class="seccion">
+        <h2>Listado de Productos</h2>
+        <form id="formProducto">
+            <input type="text" id="prodNombre" placeholder="Nombre del Producto" required>
+            <input type="number" id="prodCantidad" placeholder="Cantidad" min="1" step="1" required>
+            <input type="number" id="prodPrecio" placeholder="Precio" min="0.01" step="0.01" required>
+            <button type="submit">Agregar Producto</button>
+            <button type="button" id="limpiarProducto">Limpiar Campos</button>
+        </form>
+        <div id="productosCtn" class="contenedorTarjetas">
+            </div>
+    </section>
+
+    <section id="aportes" class="seccion">
+        <h2>Aportes de Participantes</h2>
+        <form id="formAporte">
+            <input type="text" id="aporteNombre" placeholder="Nombre del Participante" required>
+            <input type="number" id="aporteMonto" placeholder="Monto" min="0.01" step="0.01" required>
+            <button type="submit">Agregar Aporte</button>
+            <button type="button" id="limpiarAporte">Limpiar Campos</button>
+        </form>
+        <div id="aportesCtn" class="contenedorTarjetas">
+            </div>
+    </section>
+
+    <section id="resumen" class="seccion">
+        <h2>Resumen y Balance</h2>
+        <div id="resumenCtn" class="contenedorTarjetas">
+            </div>
+        <button id="btnPagarResumen">Confirmar Pago y Liquidar</button>
+    </section>
+
+    <section id="historial" class="seccion">
+        <h2>Historial de Operaciones</h2>
+        <div id="historialCtn" class="contenedorTarjetas">
+            </div>
+    </section>
+
+<footer>
+        <div class="footer-columna copyright">
+            <p>&copy; 2025 Compartir Gastos.</p>
+        </div>
+
+        <div class="footer-columna info-central">
+            <p>Proy. Final JavaScript | Realizado por Ezequiel Torres</p>
+        </div>
+
+        <div class="footer-columna redes">
+            <div class="redes-sociales-ctn">
+                <a href="https://github.com/ezequieltorres512" target="_blank" aria-label="GitHub"><i class='bx bxl-github'></i></a>
+                <a href="https://www.linkedin.com/in/ezequiel-torres-512-/" target="_blank" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://www.instagram.com/torresezequiel512/" target="_blank" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ezequieltorres512@gmail.com" target="_blank" aria-label="Correo electrónico"><i class='bx bxs-envelope'></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js"></script>
+    <script src="./js/clases/Producto.js"></script> 
+    <script src="./js/clases/Aporte.js"></script>
+    <script src="./js/clases/Historial.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
